@@ -45,6 +45,7 @@ class CarServiceImplTest extends AbstractTest {
         List<CarDto> priceCars = carService.findAllCarsPriceGreaterThan(500);
 
         CarDto t = priceCars.get(0);
+        assertEquals(t.getWeight(), 500);
         assertEquals(t.getColor(), "red");
         assertEquals(priceCars.size(), 1);
     }
